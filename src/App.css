@@ -5,3 +5,13 @@
 .dx-logo {
   width: 250px;
 }
+
+.tag {
+  margin: 2px;
+  padding: 0.4em 0.6em;
+  background-color: #686971;
+}
+
+.tag.enabled {
+  background-color: #4449aa;
+}
