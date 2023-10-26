@@ -15,3 +15,7 @@
 .tag.enabled {
   background-color: #4449aa;
 }
+
+.active {
+  color: #8286d3;
+}
