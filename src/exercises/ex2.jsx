@@ -3,6 +3,16 @@ import "./exercise.css";
 
 const API_URL = "https://dog.ceo/api/breeds/image/random";
 
+/*Segundo ejercicio:
+Tenemos un componente cuya responsabilidad es generar una imagen de un perro aleatoriamente.
+    Objetivos a cumplir:
+- Solucionar que la imagen siempre esta en estado "Cargando".
+- Cargar una imagén de un perro al inicio automaticamente.
+- Al presionar el botón "Generar Perro" el usuario debe generar una imagen aleatoria cada vez
+que este sea presionado.
+Suerte 😎🥳🧐!!
+*/
+
 const Exercise2 = () => {
   const [loading, setLoading] = useState(false);
   const [randomDogImage, setRandomDog] = useState();
