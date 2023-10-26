@@ -7,7 +7,7 @@ const Exercise2 = () => {
   const [loading, setLoading] = useState(false);
   const [randomDogImage, setRandomDog] = useState();
 
-  const getRandomDog = async () => {
+  const getRandomDog = () => {
     try {
       setLoading(true);
       const dog = fetch(API_URL);
