@@ -1,14 +1,14 @@
-import {useEffect, useState} from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-function Exercise3() {
+function Exercise4() {
   const [number, setNumber] = useState('0');
   const [message, setMessage] = useState('');
 
   useEffect(() => {
     if (number % 2 === 0) {
-      setMessage(`El número ${number} par`);
+      setMessage(`number ${number} is even`);
     } else {
-      setMessage(`El número  ${number} es impar`);
+      setMessage(`number ${number} is odd`);
     }
   }, []);
 
@@ -16,13 +16,22 @@ function Exercise3() {
     setNumber(event.target.value);
   }
 
+  const onReset = useCallback(() => {
+    setMessage(`Input value removed, previous value: ${number}`)
+
+    setNumber('0');
+  }, []);
+
   return (
     <div className="home-wrapper" style={{ width: 500 }}>
-      <p>Ingrese un numero para saber si es par o impar</p>
-      <input onChange={onNumberChange} value={number} />
+      <p>Input a number to know if it is even or odd</p>
+      <div>
+        <input onChange={onNumberChange} value={number} />
+        <button onClick={onReset}>Reset</button>
+      </div>
       <p>{message}</p>
     </div>
   );
 }
 
-export default Exercise3;
+export default Exercise4;
