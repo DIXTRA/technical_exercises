@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
-import "./exercise.css";
+import "./styles.css";
+
+/**
+ * Exercise: Async Dog
+ * 
+ * Description: Here's a component that's responsible for generating an image of a dog automatically.
+ * 
+ * Your job is:
+ *  1. Fix the never-ending loading state
+ *  2. Load a picture of a dog using the provided api as soon as the user accesses the screen
+ *  3. Anytime the user clicks on "Generar Perro" a new dog image should be displayed
+ */
 
 const API_URL = "https://dog.ceo/api/breeds/image/random";
 
-/*Segundo ejercicio:
-Tenemos un componente cuya responsabilidad es generar una imagen de un perro aleatoriamente.
-    Objetivos a cumplir:
-- Solucionar que la imagen siempre esta en estado "Cargando".
-- Cargar una imagén de un perro al inicio automaticamente.
-- Al presionar el botón "Generar Perro" el usuario debe generar una imagen aleatoria cada vez
-que este sea presionado.
-Suerte 😎🥳🧐!!
-*/
-
-const Exercise2 = () => {
+const AsyncDog = () => {
   const [loading, setLoading] = useState(false);
   const [randomDogImage, setRandomDog] = useState();
 
@@ -56,4 +57,4 @@ const Exercise2 = () => {
   );
 };
 
-export default Exercise2;
+export default AsyncDog;

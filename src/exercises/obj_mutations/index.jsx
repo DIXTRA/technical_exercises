@@ -1,8 +1,21 @@
 import { useState } from 'react';
+import TagList from './components/TagList';
+
+/**
+ * Exercise: Object mutation
+ * 
+ * Description: Everything seems to be working fine, until you try to reset the tags.
+ * At that point, the collection of tags should go back to its original state, however it
+ * still displays the newly created ones.
+ * 
+ * Your job is:
+ *  1. Understand why this is happening
+ *  2. Fix this error, so that when pressing "Reset tags" it only shows the initial tag
+ */
 
 const initialTags = { example: true };
 
-function Exercise1() {
+function ObjectMutations() {
   const [tags, setTags] = useState(initialTags);
   const [text, setText] = useState('');
 
@@ -53,29 +66,4 @@ function Exercise1() {
   );
 }
 
-const TagList = ({ tags, toggleTag }) => (
-  <div style={{ display: 'flex', padding: 6 }}>
-    {tags.map(([key, value]) => (
-      <Tag
-        key={key}
-        name={key}
-        value={value}
-        onClick={() => {
-          toggleTag(key);
-        }}
-      />
-    ))}
-  </div>
-);
-
-const Tag = ({ name, value, onClick }) => (
-  <button
-    title="toggle"
-    onClick={onClick}
-    className={`tag ${value && 'enabled'}`}
-  >
-    {name}
-  </button>
-);
-
-export default Exercise1;
+export default ObjectMutations;

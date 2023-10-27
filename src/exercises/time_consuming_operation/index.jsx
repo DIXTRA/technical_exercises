@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const veryExpensiveFunction = (n) => `<calculated value for ${n}>`;
 
-function Exercise3() {
+function TimeConsumingOperation() {
   const [counter, setCounter] = useState(0);
   const [active, setActive] = useState(true);
 
@@ -21,4 +21,4 @@ function Exercise3() {
   );
 }
 
-export default Exercise3;
+export default TimeConsumingOperation;
