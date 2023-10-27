@@ -6,6 +6,7 @@ import './index.css';
 import Exercise1 from './exercises/ex1.jsx';
 import Exercise2 from './exercises/ex2.jsx';
 import Exercise3 from './exercises/ex3.jsx';
+import Exercise4 from './exercises/ex4.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: '/ex3',
     element: <Exercise3 />,
+  },
+  {
+    path: '/ex4',
+    element: <Exercise4 />,
   },
 ]);
 
